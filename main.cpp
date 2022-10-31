@@ -45,7 +45,7 @@ __declspec(dllexport) LRESULT CALLBACK KeyboardEvent (int nCode, WPARAM wParam, 
 
 				if(index >= 1) {
                     std::stringstream ss;
-                    ss << "/switch/bulb_" << index + 1 << "/toggle";
+                    ss << "/switch/bulb_" << index  << "/toggle";
                     HttpsWebRequestPost(IP_ADDRESS, ss.str(), "");
 				} else if (index == 0) {
                     HttpsWebRequestPost(IP_ADDRESS, "button/all/press", "");
